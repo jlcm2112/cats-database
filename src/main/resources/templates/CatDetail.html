@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1 th:text="'Details for ' + ${cat.buildBinomialName()}" />
-	
+
 	<img th:src="'/images/' + ${cat.hasImage()? cat.image: 'no-cat-pic.jpg'}" th:alt="'image of ' + ${cat.buildBinomialName()}"/>
 </body>
 </html>

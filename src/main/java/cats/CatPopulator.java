@@ -16,9 +16,9 @@ public class CatPopulator implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		Genus panthera = new Genus("Panthera", "Panthera is a genus within the Felidae family that was named and first described by the German naturalist Oken in 1816.[2] "); 
+		Genus panthera = new Genus("Panthera", "Panthera is a genus within the Felidae family that was named and first described by the German naturalist Oken in 1816. "); 
 		genusRepo.save(panthera);
-		Cat cat = new Cat(panthera, "Leo");
+		Cat cat = new Cat(panthera, "Leo", "panthera-leo.jpg");
 		catRepo.save(cat);
 		
 		Genus felis = new Genus("Felis", "Felis is a genus of small and medium-sized cat species native to most of Africa and south of 60° latitude in Europe and Asia to Indochina.");

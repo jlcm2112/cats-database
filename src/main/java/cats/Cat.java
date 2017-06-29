@@ -56,11 +56,11 @@ public class Cat {
 		return genus.getName() + " " + species;
 	}
 
-//	@Override
-//    public String toString() {
-//        return String.format(
-//                "Customer[id=%d, genus='%s', species='%s']",
-//                id, genus, species);
-//    }
+	@Override
+    public String toString() {
+        return String.format(
+                "Customer[id=%d, genus='%s', species='%s']",
+                id, genus, species);
+    }
 
 }
