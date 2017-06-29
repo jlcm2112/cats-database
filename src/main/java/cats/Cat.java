@@ -15,6 +15,7 @@ public class Cat {
     
     @ManyToOne
 	private Genus genus;
+    
 	private String species;
 	
 	private String image;
