@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cat Database</title>
+<!-- 	<link rel="stylesheet" type="text/css" href="styles.css"/>
+ --></head>
+<body>
+<header>
+<h1>Cats in the database</h1>
+</header>
+
+<a th:each="cat: ${catsAsCollection}">
+<div th:text="${cat.genus.getName()} +' ' +${cat.species}"></div></a>
+
+<p>Here is a list of cats! <a href="./cats">list of cats</a></p>
+</body>
+</html>

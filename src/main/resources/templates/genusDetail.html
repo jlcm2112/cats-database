@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="'Details for ' + ${genus.name}" />
+</head>
+<body>
+	<h1 th:text="'Details for ' + ${genus.name}" />
+	<p th:text="${genus.description}" />
+
+	<form th:action="@{/addSpecies}">
+		<input name="genusId" type="hidden" th:value="${genus.id}" />
+		<label for="newSpecies">New species:</label>
+		<input name="name" type="text" id="newSpecies" />
+		<input type="submit" value="Add Species" />
+	</form>
+	<form>
+		<h2>Cats:</h2>
+		<ul>
+			<li th:each="cat: ${genus.cats}">
+				<a th:text="${cat.species}" th:href="@{/cat(id=${cat.id})}" />
+				<button name="speciesId" th:value="${cat.id}"
+					th:formaction="@{/species/delete}">Delete</button>
+			</li>
+		</ul>
+	</form>
+</body>
+</html>

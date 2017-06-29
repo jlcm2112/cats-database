@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Cats List!!</title>
+
+</head>
+<body>
+	<h1>List of Cats</h1>
+	
+	<ul>
+		<li th:each="currentCat: ${cats}"><a th:href="@{/cat(id=${currentCat.id})}" th:text="${currentCat.buildBinomialName()}" /></li>
+	</ul>
+</body>
+</html>
